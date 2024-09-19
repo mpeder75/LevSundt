@@ -9,6 +9,8 @@ public class BmiEntity
         Weight = weight;
 
         if (!IsValid()) throw new ArgumentException("Pre-conditions er ikke overholdt");
+
+        CalculateBmi();
     }
 
     /// <summary>
@@ -36,6 +38,8 @@ public class BmiEntity
 
     protected void CalculateBmi()
     {
-        Bmi = Weight / (Height * Height);
+        Bmi = Weight / (Height/100 * Height/100);
     }
 }
+
+
