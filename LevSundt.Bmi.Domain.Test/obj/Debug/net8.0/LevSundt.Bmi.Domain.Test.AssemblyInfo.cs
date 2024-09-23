@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LevSundt.Bmi.Domain.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56d5a1d635c7fbea1fe0c5178e962451c7c57c91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed4349020741cb4e11a7c3607cd4a32dc66fc24b")]
 [assembly: System.Reflection.AssemblyProductAttribute("LevSundt.Bmi.Domain.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LevSundt.Bmi.Domain.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

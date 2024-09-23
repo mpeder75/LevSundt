@@ -31,3 +31,4 @@ C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.genruntimeconfig.cache
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\ref\LevSundt.WebApp.dll
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.sourcelink.json

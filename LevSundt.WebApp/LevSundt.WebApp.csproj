@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LevSundt.Bmi.Application\LevSundt.Bmi.Application.csproj" />
+    <ProjectReference Include="..\LevSundt.Bmi.Domain\LevSundt.Bmi.Domain.csproj" />
+    <ProjectReference Include="..\LevSundt.Bmi.Infrastructure\LevSundt.Bmi.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

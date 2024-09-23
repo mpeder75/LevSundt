@@ -21,7 +21,7 @@ public class BmiEntityCreateTest
         // Arrange
 
         // Act
-        var sut = new BmiEntity(height, 100);
+        var sut = new BmiEntity(height, 100, 1);
         // Assert
     }
 
@@ -36,7 +36,7 @@ public class BmiEntityCreateTest
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100,1 ));
     }
 
     // Test af acceptable værdier for VÆGT - interval 40 til 250
@@ -49,7 +49,7 @@ public class BmiEntityCreateTest
         // Arrange
 
         // Act
-        var sut = new BmiEntity(200, weight);
+        var sut = new BmiEntity(200, weight, 1);
         // Assert
     }
 
@@ -64,7 +64,7 @@ public class BmiEntityCreateTest
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(weight, 200));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(weight, 200, 1));
     }
 
 
@@ -77,7 +77,7 @@ public class BmiEntityCreateTest
         // Arrange
        
         // Act
-        var sut = new BmiEntity(height, weight);
+        var sut = new BmiEntity(height, weight, 1);
         // Assert
         Assert.Equal(expected, Math.Round(sut.Bmi, 1));
     }
