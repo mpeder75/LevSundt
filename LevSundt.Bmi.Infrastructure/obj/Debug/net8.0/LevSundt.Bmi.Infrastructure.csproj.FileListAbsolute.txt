@@ -1,6 +1,0 @@
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.AssemblyInfo.cs
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.sourcelink.json

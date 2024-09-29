@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<form method="post">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>BMI</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (Model.IndexViewModel.Any())
+        {
+            foreach (var bmi in Model.IndexViewModel)
+            {
+                <tr>
+                    <td> @bmi.Id </td>
+                    <td>@bmi.Height</td>
+                    <td>@bmi.Weight</td>
+                    <td>@bmi.Bmi</td>
+                    <td>
+                        @*  <a asp-page="./Update" asp-route-id="@bmi.Id">Update</a> *@
+                        @*  <a asp-page="./Delete" asp-route-id="@bmi.Id">Delete</a> *@
+
+                    </td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+    <a asp-page="Update">Update New</a>
+</form>

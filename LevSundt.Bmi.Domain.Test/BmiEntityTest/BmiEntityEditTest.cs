@@ -1,0 +1,71 @@
+﻿using LevSundt.Bmi.Domain.Model;
+
+namespace LevSundt.Bmi.Domain.Test.BmiEntityTest;
+
+public class BmiEntityEditTest
+{
+    /// <summary>
+    /// Acceptabel højde (100 - 250)
+    /// Acceptabel vægt (40,0 - 250,0)
+    /// </summary>
+    [Theory]
+    [InlineData(190, 90, 24.9)]
+    [InlineData(100, 100, 100)]
+    [InlineData(250, 100, 16)]
+    public void Given_Height_Is_Valid__Then_BmiEnitiy_Is_Updated(double height, double weight, double bmi)
+    {
+        // Arrange
+        var sut = new BmiEntity(180, 80, 1);
+
+        // Act
+        sut.Edit(weight, height);
+
+        // Assert
+        Assert.Equal(height, sut.Height);
+        Assert.Equal(weight, sut.Weight);
+        Assert.Equal(bmi, Math.Round(sut.Bmi, 1));
+    }
+
+    [Theory]
+    [InlineData(250.01)]
+    [InlineData(99.99)] 
+    public void Given_Height_Is_InValid__Then_ArgumentException_Is_Thrown(double height)
+    {
+        // Arrange
+        var sut = new BmiEntity(180, 80, 1); 
+        
+        // Act
+        // Assert
+        Assert.Throws<ArgumentException>(() => sut.Edit(height, 80));
+    }
+
+    [Theory]
+    [InlineData(100, 100, 100)] 
+    [InlineData(100, 250, 250)] 
+    [InlineData(100, 40, 40)]
+    public void Given_Weight_Is_Valid__Then_BmiEnitiy_Is_Updated(double height, double weight, double bmi)
+    {
+        // Arrange
+        var sut = new BmiEntity(180, 80, 1);
+
+        // Act
+        sut.Edit(weight, height);
+
+        // Assert
+        Assert.Equal(height, sut.Height);
+        Assert.Equal(weight, sut.Weight);
+        Assert.Equal(bmi, Math.Round(sut.Bmi, 1));
+    }
+
+    [Theory]
+    [InlineData(250.01)]
+    [InlineData(39.99)]
+    public void Given_Weight_Is_InValid__Then_ArgumentException_Is_Thrown(double weight)
+    {
+        // Arrange
+        var sut = new BmiEntity(180, 80, 1);
+        // Act
+        // Assert
+        Assert.Throws<ArgumentException>(() => sut.Edit(weight, 80));
+    }
+}

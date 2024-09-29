@@ -36,7 +36,7 @@ public class BmiEntityCreateTest
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100,1 ));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100, 1 ));
     }
 
     // Test af acceptable værdier for VÆGT - interval 40 til 250
