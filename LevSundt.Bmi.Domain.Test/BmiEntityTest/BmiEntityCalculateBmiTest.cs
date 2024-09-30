@@ -1,49 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LevSundt.Bmi.Domain.DomainServices;
 using LevSundt.Bmi.Domain.Model;
+using Moq;
 
-namespace LevSundt.Bmi.Domain.Test.BmiEntityTest
+namespace LevSundt.Bmi.Domain.Test.BmiEntityTest;
+
+public class BmiEntityCalculateBmiTest
 {
-    public class BmiEntityCalculateBmiTest
+    [Theory]
+    [InlineData(200, 100, 25)]
+    [InlineData(190, 90, 24.9)]
+    public void Given_Height_And_Weight_Then__BMI_Is_Calculated_Correct( 
+        double height, double weight, double expected)
     {
-        // Her vil vi teste metoden CalculateBmi() i BmiEntity moddellen
-        [Theory]
-        [InlineData(200, 100, 25)]
-        [InlineData(190, 90, 24.9)]
-        public void Given_Height_And_Weight_Then__BMI_Is_Calculated_Correct(double height, double weight, double expected)
+        // Arrange
+        // Vi skal bruge en mock af IBmiDomainService
+        var mock = new Mock<IBmiDomainService>();    
+        var sut = new BmiEntityTest(mock.Object, height, weight);   // mock bruges som parameter
+
+        // Act
+        sut.CalculateBmi();
+
+        // Assert
+        Assert.Equal(expected, Math.Round(sut.Bmi, 1));
+    }
+
+    public class BmiEntityTest : BmiEntity
+    {
+        public BmiEntityTest(IBmiDomainService domainService, double height, double weight) : base(domainService,height, weight, 1)
         {
-            // Arrange
-            // Vi opretter en instans af BmiEntityTest, hvor base class constructor kaldes
-            var sut = new BmiEntityTest(height, weight);
-
-            // Act
-            sut.CalculateBmi();
-
-            // Assert
-            Assert.Equal(expected, Math.Round(sut.Bmi,1));
         }
 
-
-
-        public class BmiEntityTest : BmiEntity
+        /// <summary>
+        ///     Vi vil teste metoden CalculateBmi() i BmiEntity modellen.
+        ///     Da CalculateBmi() er protected, skal vi override metoden med new.
+        ///     base.CalculateBmi() bruges for at kalde metoden fra BmiEntity
+        /// </summary>
+        public new void CalculateBmi()
         {
-            public BmiEntityTest(double height, double weight) : base(height, weight, 1)
-            {
-            }
-
-            /// <summary>
-            /// Vi vil teste metoden CalculateBmi() i BmiEntity modellen.
-            /// Da CalculateBmi() er protected, skal vi override metoden med new.
-            /// base.CalculateBmi() bruges for at kalde metoden fra BmiEntity
-            /// </summary>
-            public new void CalculateBmi()
-            {
-                base.CalculateBmi();
-            }
+            base.CalculateBmi();
         }
     }
 }

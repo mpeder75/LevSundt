@@ -6,7 +6,7 @@ namespace LevSundt.Bmi.Infrastructure.Repository;
 
 public class BmiRepository : IBmiRepository
 {
-    private static readonly Dictionary<int, BmiEntity> _database = new();
+    public static readonly Dictionary<int, BmiEntity> _database = new();
 
     void IBmiRepository.Add(BmiEntity bmi)
     {

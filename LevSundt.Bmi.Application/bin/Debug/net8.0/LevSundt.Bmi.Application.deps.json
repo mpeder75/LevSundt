@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LevSundt.Bmi.Application/1.0.0": {
+        "dependencies": {
+          "LevSundt.Bmi.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LevSundt.Bmi.Application.dll": {}
+        }
+      },
+      "LevSundt.Bmi.Domain/1.0.0": {
+        "runtime": {
+          "LevSundt.Bmi.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LevSundt.Bmi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LevSundt.Bmi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

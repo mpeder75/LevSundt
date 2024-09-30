@@ -10,7 +10,7 @@ public class CreateModel : PageModel
     private readonly ICreateBmiCommand _createBmiCommand;
     
     [BindProperty]
-    public BmiCreateViewModel BmiCreateViewModel { get; set; } = new();
+    public BmiCreateViewModel BmiModel { get; set; } = new();
 
 
     public CreateModel(ICreateBmiCommand createBmiCommand)
@@ -29,8 +29,8 @@ public class CreateModel : PageModel
         // Opretter en dto ud fra BmiCreateReview model
         var dto = new BmiCreateRequestDto
         {
-            Height = BmiCreateViewModel.Height.Value,
-            Weight = BmiCreateViewModel.Weight.Value
+            Height = BmiModel.Height.Value,
+            Weight = BmiModel.Weight.Value,
         };
 
         // Når deto er oprettet sendes den med som parameter i _createBmiComman

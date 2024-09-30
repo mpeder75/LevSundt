@@ -1,4 +1,6 @@
-﻿using LevSundt.Bmi.Domain.Model;
+﻿using LevSundt.Bmi.Domain.DomainServices;
+using LevSundt.Bmi.Domain.Model;
+using Moq;
 
 namespace LevSundt.Bmi.Domain.Test.BmiEntityTest;
 
@@ -15,7 +17,8 @@ public class BmiEntityEditTest
     public void Given_Height_Is_Valid__Then_BmiEnitiy_Is_Updated(double height, double weight, double bmi)
     {
         // Arrange
-        var sut = new BmiEntity(180, 80, 1);
+        var mock = new Mock<IBmiDomainService>();
+        var sut = new BmiEntity(mock.Object, 180, 80, 1);
 
         // Act
         sut.Edit(weight, height);
@@ -32,7 +35,8 @@ public class BmiEntityEditTest
     public void Given_Height_Is_InValid__Then_ArgumentException_Is_Thrown(double height)
     {
         // Arrange
-        var sut = new BmiEntity(180, 80, 1); 
+        var mock = new Mock<IBmiDomainService>();
+        var sut = new BmiEntity(mock.Object, 180, 80, 1); 
         
         // Act
         // Assert
@@ -46,7 +50,8 @@ public class BmiEntityEditTest
     public void Given_Weight_Is_Valid__Then_BmiEnitiy_Is_Updated(double height, double weight, double bmi)
     {
         // Arrange
-        var sut = new BmiEntity(180, 80, 1);
+        var mock = new Mock<IBmiDomainService>();
+        var sut = new BmiEntity(mock.Object, 180, 80, 1);
 
         // Act
         sut.Edit(weight, height);
@@ -63,7 +68,8 @@ public class BmiEntityEditTest
     public void Given_Weight_Is_InValid__Then_ArgumentException_Is_Thrown(double weight)
     {
         // Arrange
-        var sut = new BmiEntity(180, 80, 1);
+        var mock = new Mock<IBmiDomainService>();
+        var sut = new BmiEntity(mock.Object, 180, 80, 1);
         // Act
         // Assert
         Assert.Throws<ArgumentException>(() => sut.Edit(weight, 80));

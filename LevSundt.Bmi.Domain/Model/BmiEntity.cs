@@ -1,4 +1,6 @@
-﻿namespace LevSundt.Bmi.Domain.Model;
+﻿using LevSundt.Bmi.Domain.DomainServices;
+
+namespace LevSundt.Bmi.Domain.Model;
 
 public class BmiEntity
 {
@@ -6,25 +8,26 @@ public class BmiEntity
     ///     Vi er IKKE interesseret i at man kan ændre i vores model, derfor er set private
     /// </summary>
     public double Height { get; private set; }
-
     public double Weight { get; private set; }
     public double Bmi { get; private set; }
     public string UserId { get; private set; }
-    public int Id { get; protected set; }
+    public int Id { get; }
+    public DateTime Date { get; }
+    private readonly IBmiDomainService _domainService;
 
-    protected BmiEntity()
-    {
-    }
+    protected BmiEntity() { }
 
-
-    public BmiEntity(double height, double weight, int id)
+    public BmiEntity(IBmiDomainService domainService,double height, double weight, int id)
     {
         // Check pre-conditions
         Height = height;
         Weight = weight;
         Id = id;
+        Date = DateTime.Now;
+        _domainService = domainService;
 
         if (!IsValid()) throw new ArgumentException("Pre-conditions er ikke overholdt");
+        if (_domainService.BmiExistsOnDate(Date.Date, id)) throw new ArgumentException("Pre-conditions er ikke overholdt");
 
         CalculateBmi();
     }
