@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.JavaScript;
 using LevSundt.Bmi.Application.Command;
 using LevSundt.Bmi.Application.Command.Dto;
 using LevSundt.Bmi.Application.Queries;
@@ -20,12 +21,16 @@ public class EditModel : PageModel
 
     public IActionResult OnPost()
     {
-        // hvis modelstate ikke er valid, så returner
         if (!ModelState.IsValid) return Page();
 
         _bmiCommand.Edit(new BmiEditRequestDto
-            { Height = BmiModel.Height, Id = BmiModel.Id, Weight = BmiModel.Weight });
-
+        {
+            Height = BmiModel.Height, 
+            Id = BmiModel.Id, 
+            Weight = BmiModel.Weight,
+            Date = BmiModel.Date,
+            RowVersion = BmiModel.RowVersion
+        });
         return new RedirectToPageResult("/Bmi/Index");
     }
 
@@ -35,8 +40,14 @@ public class EditModel : PageModel
 
         var dto = _query.Get(id.Value);
 
-        BmiModel = new BmiEditViewModel { Height = dto.Height, Id = dto.Id, Weight = dto.Weight };
-
+        BmiModel = new BmiEditViewModel
+        {
+            Height = dto.Height, 
+            Id = dto.Id, 
+            Weight = dto.Weight,
+            Date = dto.Date,
+            RowVersion = dto.RowVersion
+        };
         return Page();
     }
 }

@@ -24,7 +24,7 @@ public class BmiEntityCreateTest
         var mock = new Mock<IBmiDomainService>();
 
         // Act
-        var sut = new BmiEntity(mock.Object, height, 100, 1);
+        var sut = new BmiEntity(mock.Object, height, 100);
         // Assert
     }
 
@@ -37,11 +37,11 @@ public class BmiEntityCreateTest
         // Arrange
         var mock = new Mock<IBmiDomainService>();
         // uanset hvilken data, vil den altid returner false - HUSK vi tester her for invalid
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<int>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, height, 100, 1 ));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, height, 100));
     }
 
     // Test af acceptable værdier for VÆGT - interval 40 til 250
@@ -54,7 +54,7 @@ public class BmiEntityCreateTest
         // Arrange
         var mock = new Mock<IBmiDomainService>();
         // Act
-        var sut = new BmiEntity(mock.Object, 200, weight, 1);
+        var sut = new BmiEntity(mock.Object, 200, weight);
         // Assert
     }
 
@@ -66,12 +66,12 @@ public class BmiEntityCreateTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(),It.IsAny<int>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
 
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, weight, 200, 1));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, weight, 200));
     }
 
     // Test af uacceptable værdier for VÆGT
@@ -84,7 +84,7 @@ public class BmiEntityCreateTest
         var mock = new Mock<IBmiDomainService>();
 
         // Act
-        var sut = new BmiEntity(mock.Object, height, weight, 1);
+        var sut = new BmiEntity(mock.Object, height, weight);
         // Assert
         Assert.Equal(expected, Math.Round(sut.Bmi, 1));
     }
@@ -95,9 +95,9 @@ public class BmiEntityCreateTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(),It.IsAny<int>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
         // Act
-        var sut = new BmiEntity(mock.Object, 100, 100, 1);
+        var sut = new BmiEntity(mock.Object, 100, 100);
         // Assert
     }
     
@@ -107,12 +107,9 @@ public class BmiEntityCreateTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<int>())).Returns(true);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(true);
         // Act
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, 100, 100, 1 ));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, 100, 100));
     }
-
-   
-
 }

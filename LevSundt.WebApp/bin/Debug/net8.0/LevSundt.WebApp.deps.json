@@ -11,6 +11,8 @@
           "LevSundt.Bmi.Application": "1.0.0",
           "LevSundt.Bmi.Domain": "1.0.0",
           "LevSundt.Bmi.Infrastructure": "1.0.0",
+          "LevSundt.SqlServerContext": "1.0.0",
+          "LevSundt.SqlServerContext.Migrations": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0-rc.1.24451.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.1.24451.1",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0-rc.1.24451.1"
@@ -1012,10 +1014,37 @@
       "LevSundt.Bmi.Infrastructure/1.0.0": {
         "dependencies": {
           "LevSundt.Bmi.Application": "1.0.0",
-          "LevSundt.Bmi.Domain": "1.0.0"
+          "LevSundt.Bmi.Domain": "1.0.0",
+          "LevSundt.SqlServerContext": "1.0.0"
         },
         "runtime": {
           "LevSundt.Bmi.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LevSundt.SqlServerContext/1.0.0": {
+        "dependencies": {
+          "LevSundt.Bmi.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0-rc.1.24451.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.1.24451.1"
+        },
+        "runtime": {
+          "LevSundt.SqlServerContext.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LevSundt.SqlServerContext.Migrations/1.0.0": {
+        "dependencies": {
+          "LevSundt.SqlServerContext": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0-rc.1.24451.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.1.24451.1"
+        },
+        "runtime": {
+          "LevSundt.SqlServerContext.Migrations.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1586,6 +1615,16 @@
       "sha512": ""
     },
     "LevSundt.Bmi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LevSundt.SqlServerContext/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LevSundt.SqlServerContext.Migrations/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

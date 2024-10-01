@@ -26,7 +26,7 @@ public class BmiEntityCalculateBmiTest
 
     public class BmiEntityTest : BmiEntity
     {
-        public BmiEntityTest(IBmiDomainService domainService, double height, double weight) : base(domainService,height, weight, 1)
+        public BmiEntityTest(IBmiDomainService domainService, double height, double weight) : base(domainService,height, weight )
         {
         }
 

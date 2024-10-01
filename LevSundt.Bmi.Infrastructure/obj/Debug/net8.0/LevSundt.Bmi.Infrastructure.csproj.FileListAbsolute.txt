@@ -3,8 +3,10 @@ C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructur
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.Bmi.Infrastructure.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.Bmi.Application.dll
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.Bmi.Domain.dll
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.SqlServerContext.dll
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.Bmi.Application.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.Bmi.Domain.pdb
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\bin\Debug\net8.0\LevSundt.SqlServerContext.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.Bmi.Infrastructure\obj\Debug\net8.0\LevSundt.Bmi.Infrastructure.AssemblyInfoInputs.cache

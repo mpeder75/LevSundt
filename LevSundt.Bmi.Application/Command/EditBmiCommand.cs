@@ -12,16 +12,15 @@ public class EditBmiCommand : IEditBmiCommand
         _repository = repository;
     }
 
-    void IEditBmiCommand.Edit(BmiEditRequestDto bmiEditRequestDto)
+    void IEditBmiCommand.Edit(BmiEditRequestDto requestDto)
     {
         // Load
-        var model = _repository.Load(bmiEditRequestDto.Id);
+        var model = _repository.Load(requestDto.Id);
 
         // Do
-        model.Edit(bmiEditRequestDto.Height, bmiEditRequestDto.Weight);
+        model.Edit(requestDto.Height, requestDto.Weight, requestDto.RowVersion);
 
         // Update
         _repository.Update(model);
-
     }
 }

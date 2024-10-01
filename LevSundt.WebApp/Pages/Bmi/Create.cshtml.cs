@@ -31,6 +31,7 @@ public class CreateModel : PageModel
         {
             Height = BmiModel.Height.Value,
             Weight = BmiModel.Weight.Value,
+            UserId = User.Identity?.Name ?? string.Empty
         };
 
         // Når deto er oprettet sendes den med som parameter i _createBmiComman

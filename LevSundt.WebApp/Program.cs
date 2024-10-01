@@ -32,10 +32,9 @@ builder.Services.AddScoped<IBmiDomainService, BmiDomainService>();
 // Tilføjer DbContext til DI container OG fortæller HVOR migration skal gemmes
 builder.Services.AddDbContext<LevSundtContext>(
         options => options.UseSqlServer(
-            builder.Configuration.GetConnectionString("LevSundtConnectionString"),
+            builder.Configuration.GetConnectionString("LevSundtConnectionString") + ";TrustServerCertificate=True",
         x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")
         ));
-
 
 var app = builder.Build();
 
@@ -50,9 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapRazorPages();
 
 app.Run();

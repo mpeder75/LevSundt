@@ -146,9 +146,13 @@ C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Application.dll
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Domain.dll
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Infrastructure.dll
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.SqlServerContext.dll
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.SqlServerContext.Migrations.dll
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Application.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Domain.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.Bmi.Infrastructure.pdb
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.SqlServerContext.Migrations.pdb
+C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\bin\Debug\net8.0\LevSundt.SqlServerContext.pdb
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.csproj.AssemblyReference.cache
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mpede\source\repos\mpeder75\LevSundtSolution\LevSundt.WebApp\obj\Debug\net8.0\LevSundt.WebApp.AssemblyInfoInputs.cache

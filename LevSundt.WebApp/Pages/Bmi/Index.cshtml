@@ -8,8 +8,9 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Height</th>
-            <th>Weight</th>
+            <th>Dato</th>
+            <th>Højde</th>
+            <th>Vægt</th>
             <th>BMI</th>
             <th></th>
         </tr>
@@ -21,18 +22,22 @@
             {
                 <tr>
                     <td> @bmi.Id </td>
+                    <td> @bmi.Date </td>
                     <td>@bmi.Height</td>
                     <td>@bmi.Weight</td>
                     <td>@bmi.Bmi</td>
                     <td>
-                        @*  <a asp-page="./Update" asp-route-id="@bmi.Id">Update</a> *@
-                        @*  <a asp-page="./Delete" asp-route-id="@bmi.Id">Delete</a> *@
-
+                        <!-- <snippet_Edit> -->
+                        <a asp-page="./Edit" asp-route-id="@bmi.Id">Edit</a> |
+                        <!-- </snippet_Edit> -->
+                        <!-- <snippet_Delete> -->
+                        <a asp-page="./Delete" asp-route-id="@bmi.Id">Delete</a>
+                        <!-- </snippet_Delete> -->
                     </td>
                 </tr>
             }
         }
         </tbody>
     </table>
-    <a asp-page="Update">Update New</a>
+    <a asp-page="Create">Create New</a>
 </form>

@@ -10,7 +10,6 @@ public class CreateBmiCommand : ICreateBmiCommand
     private readonly IBmiRepository _bmiRepository;
     private readonly IBmiDomainService _domainService;
 
-
     public CreateBmiCommand(IBmiRepository bmiRepository, IBmiDomainService domainService)
     {
         _bmiRepository = bmiRepository;
@@ -19,16 +18,12 @@ public class CreateBmiCommand : ICreateBmiCommand
 
     void ICreateBmiCommand.Create(BmiCreateRequestDto bmiCreateRequestDto)
     {
-        var id = _bmiRepository.GetNextKey();
-
         var bmi = new BmiEntity
         (
             _domainService, 
             bmiCreateRequestDto.Height,
-            bmiCreateRequestDto.Weight,
-            bmiCreateRequestDto.Id
+            bmiCreateRequestDto.Weight
         );
-
         _bmiRepository.Add(bmi);
     }
 }

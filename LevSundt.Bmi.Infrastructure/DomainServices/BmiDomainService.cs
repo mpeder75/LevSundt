@@ -1,13 +1,20 @@
 ﻿using LevSundt.Bmi.Domain.DomainServices;
-using LevSundt.Bmi.Infrastructure.Repository;
+using LevSundt.SqlServerContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace LevSundt.Bmi.Infrastructure.DomainServices;
 
 public class BmiDomainService : IBmiDomainService
 {
+    private readonly LevSundtContext _db;
 
-    bool IBmiDomainService.BmiExistsOnDate(DateTime date, int id)
+    public BmiDomainService(LevSundtContext db)
     {
-        return BmiRepository._database.Values.Any(a => a.Date.Date == date.Date && a.Id == id );
+        _db = db;
+    }
+
+    bool IBmiDomainService.BmiExistsOnDate(DateTime date)
+    {
+        return _db.BmiEntities.AsNoTracking().ToList().Any(a => a.Date.Date == date.Date);
     }
 }

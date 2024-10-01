@@ -1614,7 +1614,8 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "LevSundt.Bmi.Application": "1.0.0",
-          "LevSundt.Bmi.Domain": "1.0.0"
+          "LevSundt.Bmi.Domain": "1.0.0",
+          "LevSundt.SqlServerContext": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LevSundt.Bmi.Infrastructure.dll": {}

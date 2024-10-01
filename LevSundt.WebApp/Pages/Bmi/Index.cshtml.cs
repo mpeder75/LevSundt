@@ -22,7 +22,6 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         var businessModel = _bmiGetAllQuery.GetAll();
-
         /* // Metode 1 : Manuelt mapning
         foreach (var dto in businessModel)
         {
@@ -36,6 +35,12 @@ public class IndexModel : PageModel
         // Metode 2 : Mapping med Lampda & Linq
         // Business model konverteres til en list, derefter bruges en Foreach på List
         businessModel.ToList().ForEach(dto => IndexViewModel.Add(new BmiIndexViewModel
-            { Bmi = dto.Bmi, Weight = dto.Weight, Height = dto.Height, Id = dto.Id }));
+        {
+            Bmi = dto.Bmi,
+            Weight = dto.Weight, 
+            Height = dto.Height, 
+            Id = dto.Id,
+            Date = dto.Date
+        }));
     }
 }

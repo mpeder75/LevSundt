@@ -8,6 +8,6 @@ namespace LevSundt.Bmi.Domain.DomainServices
 {
     public interface IBmiDomainService
     {
-        bool BmiExistsOnDate(DateTime date, int id);
+        bool BmiExistsOnDate(DateTime date);
     }
 }
