@@ -11,7 +11,8 @@ public class EditModel : PageModel
 {
     private readonly IEditBmiCommand _bmiCommand;
     private readonly IBmiGetQuery _query;
-    [BindProperty] public BmiEditViewModel BmiModel { get; set; }
+    [BindProperty] 
+    public BmiEditViewModel BmiModel { get; set; }
 
     public EditModel(IEditBmiCommand bmiCommand, IBmiGetQuery query)
     {
@@ -29,6 +30,7 @@ public class EditModel : PageModel
             Id = BmiModel.Id, 
             Weight = BmiModel.Weight,
             Date = BmiModel.Date,
+            // Lost update håndteres med optimistic concurrency rowVersion
             RowVersion = BmiModel.RowVersion
         });
         return new RedirectToPageResult("/Bmi/Index");
@@ -46,6 +48,7 @@ public class EditModel : PageModel
             Id = dto.Id, 
             Weight = dto.Weight,
             Date = dto.Date,
+            // Lost update håndteres med optimistic concurrency rowVersion
             RowVersion = dto.RowVersion
         };
         return Page();

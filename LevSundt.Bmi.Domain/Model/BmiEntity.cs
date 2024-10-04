@@ -43,8 +43,10 @@ public class BmiEntity
     protected bool IsValid()
     {
         // Break fast princip
-        if ((Height < 100) || (Height > 250)) return false;
-        if ((Weight < 40.0) || (Weight > 250.0)) return false;
+        if (Height < 100) return false;
+        if (Height > 250) return false;
+        if (Weight < 40) return false;
+        if (Weight > 250) return false;
 
         return true;
     }
