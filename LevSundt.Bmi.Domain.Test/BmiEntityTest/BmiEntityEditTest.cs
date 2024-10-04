@@ -18,7 +18,7 @@ public class BmiEntityEditTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        var sut = new BmiEntity(mock.Object, 180, 80);
+        var sut = new BmiEntity(mock.Object, 180, 80 , "");
 
         // Act
         sut.Edit(weight, height, null);
@@ -36,7 +36,7 @@ public class BmiEntityEditTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        var sut = new BmiEntity(mock.Object, 180, 80); 
+        var sut = new BmiEntity(mock.Object, 180, 80, "" ); 
         
         // Act
         // Assert
@@ -51,7 +51,7 @@ public class BmiEntityEditTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        var sut = new BmiEntity(mock.Object, 180, 80);
+        var sut = new BmiEntity(mock.Object, 180, 80 , "");
 
         // Act
         sut.Edit(weight, height, null);
@@ -69,7 +69,7 @@ public class BmiEntityEditTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        var sut = new BmiEntity(mock.Object, 180, 80);
+        var sut = new BmiEntity(mock.Object, 180, 80, "");
         // Act
         // Assert
         Assert.Throws<ArgumentException>(() => sut.Edit(weight, 80, null));

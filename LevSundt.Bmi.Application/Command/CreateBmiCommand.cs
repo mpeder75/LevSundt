@@ -22,7 +22,8 @@ public class CreateBmiCommand : ICreateBmiCommand
         (
             _domainService, 
             bmiCreateRequestDto.Height,
-            bmiCreateRequestDto.Weight
+            bmiCreateRequestDto.Weight,
+            bmiCreateRequestDto.UserId
         );
         _bmiRepository.Add(bmi);
     }

@@ -24,7 +24,7 @@ public class BmiEntityCreateTest
         var mock = new Mock<IBmiDomainService>();
 
         // Act
-        var sut = new BmiEntity(mock.Object, height, 100);
+        var sut = new BmiEntity(mock.Object, height, 100, "");
         // Assert
     }
 
@@ -41,7 +41,7 @@ public class BmiEntityCreateTest
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, height, 100));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, height, 100, ""));
     }
 
     // Test af acceptable værdier for VÆGT - interval 40 til 250
@@ -54,7 +54,7 @@ public class BmiEntityCreateTest
         // Arrange
         var mock = new Mock<IBmiDomainService>();
         // Act
-        var sut = new BmiEntity(mock.Object, 200, weight);
+        var sut = new BmiEntity(mock.Object, 200, weight, "");
         // Assert
     }
 
@@ -71,7 +71,7 @@ public class BmiEntityCreateTest
         // Act
 
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, weight, 200));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, weight, 200, ""));
     }
 
     // Test af uacceptable værdier for VÆGT
@@ -84,7 +84,7 @@ public class BmiEntityCreateTest
         var mock = new Mock<IBmiDomainService>();
 
         // Act
-        var sut = new BmiEntity(mock.Object, height, weight);
+        var sut = new BmiEntity(mock.Object, height, weight, "");
         // Assert
         Assert.Equal(expected, Math.Round(sut.Bmi, 1));
     }
@@ -97,7 +97,7 @@ public class BmiEntityCreateTest
         var mock = new Mock<IBmiDomainService>();
         mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
         // Act
-        var sut = new BmiEntity(mock.Object, 100, 100);
+        var sut = new BmiEntity(mock.Object, 100, 100, "");
         // Assert
     }
     
@@ -110,6 +110,6 @@ public class BmiEntityCreateTest
         mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(true);
         // Act
         // Assert
-        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, 100, 100));
+        Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, 100, 100, ""));
     }
 }

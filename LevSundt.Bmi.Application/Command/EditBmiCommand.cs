@@ -14,8 +14,8 @@ public class EditBmiCommand : IEditBmiCommand
 
     void IEditBmiCommand.Edit(BmiEditRequestDto requestDto)
     {
-        // Load
-        var model = _repository.Load(requestDto.Id);
+        // Load - Her henter vi modellen fra databasen basert på id og userId
+        var model = _repository.Load(requestDto.Id, requestDto.UserId);
 
         // Do
         model.Edit(requestDto.Height, requestDto.Weight, requestDto.RowVersion);

@@ -21,9 +21,9 @@ public class BmiRepository : IBmiRepository
         _db.SaveChanges();
     }
 
-    IEnumerable<BmiQueryResultDto> IBmiRepository.GetAll()
+    IEnumerable<BmiQueryResultDto> IBmiRepository.GetAll(string userId)
     {
-        foreach (var entity in _db.BmiEntities.AsNoTracking().ToList())
+        foreach (var entity in _db.BmiEntities.AsNoTracking().Where(x => x.UserId == userId).ToList())
             yield return new BmiQueryResultDto
             {
                 Bmi = entity.Bmi,
@@ -35,9 +35,11 @@ public class BmiRepository : IBmiRepository
             };
     }
 
-    BmiEntity IBmiRepository.Load(int id)
+    BmiEntity IBmiRepository.Load(int id, string userId)
     {
-        var dbEntity = _db.BmiEntities.AsNoTracking().FirstOrDefault(x => x.Id == id);
+        // når der loades, skal der bruges AsNoTracking, da vi ikke vil have EF til at tracke objektet
+        // der søges efter om Id og UserId matcher
+        var dbEntity = _db.BmiEntities.AsNoTracking().FirstOrDefault(x => x.Id == id && x.UserId == userId);
 
         if (dbEntity == null) throw new Exception("Bmi måling findes ikke i database");
 
@@ -51,9 +53,9 @@ public class BmiRepository : IBmiRepository
         _db.SaveChanges();
     }
 
-    BmiQueryResultDto IBmiRepository.Get(int id)
+    BmiQueryResultDto IBmiRepository.Get(int id, string userId)
     {
-        var dbEntity = _db.BmiEntities.AsNoTracking().FirstOrDefault(x => x.Id == id);
+        var dbEntity = _db.BmiEntities.AsNoTracking().FirstOrDefault(x => x.Id == id && x.UserId == userId);
 
         if (dbEntity == null) throw new Exception("Bmi måling findes ikke i database");
 
