@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevSundt.WebApp.UserContext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevSundt.WebApp.UserContext", "LevSundt.WebApp.UserContext\LevSundt.WebApp.UserContext.csproj", "{DE3D85C9-BFFF-4C60-8658-B9A78408F69B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevSundt.Api", "LevSundt.Api\LevSundt.Api.csproj", "{51076C0D-E655-4CEA-86C4-F1E3FCBDD58E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{DE3D85C9-BFFF-4C60-8658-B9A78408F69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE3D85C9-BFFF-4C60-8658-B9A78408F69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE3D85C9-BFFF-4C60-8658-B9A78408F69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51076C0D-E655-4CEA-86C4-F1E3FCBDD58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51076C0D-E655-4CEA-86C4-F1E3FCBDD58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51076C0D-E655-4CEA-86C4-F1E3FCBDD58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51076C0D-E655-4CEA-86C4-F1E3FCBDD58E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

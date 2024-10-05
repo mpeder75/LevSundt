@@ -1,0 +1,679 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Api\\LevSundt.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Api\\LevSundt.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Api\\LevSundt.Api.csproj",
+        "projectName": "LevSundt.Api",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Api\\LevSundt.Api.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj",
+        "projectName": "LevSundt.Bmi.Application",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj",
+        "projectName": "LevSundt.Bmi.Domain",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj",
+        "projectName": "LevSundt.Bmi.Infrastructure",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
+              },
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj",
+        "projectName": "LevSundt.SqlServerContext.Migrations",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj",
+        "projectName": "LevSundt.SqlServerContext",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj",
+        "projectName": "LevSundt.WebApp.UserContext.Migrations",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj",
+        "projectName": "LevSundt.WebApp.UserContext",
+        "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\LevSundt.WebApp.UserContext.csproj",
+        "packagesPath": "C:\\Users\\mpede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mpede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
+                "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

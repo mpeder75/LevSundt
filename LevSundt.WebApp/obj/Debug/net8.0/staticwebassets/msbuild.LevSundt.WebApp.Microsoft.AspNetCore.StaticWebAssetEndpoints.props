@@ -40,13 +40,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LevSundt.WebApp.frn456vimv.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1133"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Oct 2024 17:27:25 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1133"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Oct 2024 15:38:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LevSundt.WebApp/LevSundt.WebApp.frn456vimv.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LevSundt.WebApp.frn456vimv.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"frn456vimv"},{"Name":"integrity","Value":"sha256-tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY="},{"Name":"label","Value":"_content/LevSundt.WebApp/LevSundt.WebApp.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1133"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Oct 2024 17:27:25 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1133"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tUGXGxNepZST5toU\u002BszkuWtEQ9/J2CYozIfCRV1hIfY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Oct 2024 15:38:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LevSundt.WebApp/lib/bootstrap/dist/css/bootstrap-grid.agp80tu62r.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

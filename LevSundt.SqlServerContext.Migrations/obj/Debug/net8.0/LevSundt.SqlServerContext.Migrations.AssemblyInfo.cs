@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LevSundt.SqlServerContext.Migrations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaa357d60755cb1176e81eaa18abe4e9e6f7c460")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf3e6735870f289b1086a5a8387248a4e7058e8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LevSundt.SqlServerContext.Migrations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LevSundt.SqlServerContext.Migrations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

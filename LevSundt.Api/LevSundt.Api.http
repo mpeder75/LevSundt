@@ -1,0 +1,6 @@
+@LevSundt.Api_HostAddress = http://localhost:5211
+
+GET {{LevSundt.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

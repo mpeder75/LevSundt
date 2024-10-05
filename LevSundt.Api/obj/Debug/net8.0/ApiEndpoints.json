@@ -1,0 +1,72 @@
+[
+  {
+    "ContainingType": "LevSundt.Api.Controllers.BmiController",
+    "Method": "Post",
+    "RelativePath": "api/Bmi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LevSundt.Bmi.Application.Command.Dto.BmiCreateRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LevSundt.Api.Controllers.BmiController",
+    "Method": "Put",
+    "RelativePath": "api/Bmi",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LevSundt.Bmi.Application.Command.Dto.BmiEditRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LevSundt.Api.Controllers.BmiController",
+    "Method": "Get",
+    "RelativePath": "api/Bmi/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[LevSundt.Bmi.Application.Queries.Dto.BmiQueryResultDto, LevSundt.Bmi.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

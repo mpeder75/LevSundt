@@ -11,8 +11,6 @@ using LevSundt.WebApp.UserContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-
 // Add services to the DI container
 builder.Services.AddScoped<ICreateBmiCommand, CreateBmiCommand>();
 builder.Services.AddScoped<IBmiRepository, BmiRepository>();
@@ -45,6 +43,20 @@ builder.Services.AddDbContext<WebAppUserDbContext>(options =>
 
 // ------------------------EF Core------------------------
 
+// Her opsættes en rolle Coach
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("CoachPolicy", policyBuilder => policyBuilder.RequireClaim("Coach"));
+});
+
+builder.Services.AddRazorPages(options =>
+{
+    // man skal være logget ind for at tilgå BMI folderen
+    options.Conventions.AuthorizeFolder("/Bmi/");
+    // man skal være logget ind som Coach, for at tilgå Coach folderen
+    options.Conventions.AuthorizeFolder("/Coach/", "CoachPolicy");
+
+});
 
 // Configure Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>

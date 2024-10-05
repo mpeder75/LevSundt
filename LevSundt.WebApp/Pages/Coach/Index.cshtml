@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+}
+<table class="table">
+    <tHeader>
+        <tr>
+            <th>Bruger</th>
+            <th></th>
+        </tr>
+    </tHeader>
+    <tBody>
+    @if (Model.Users.Any())
+    {
+        foreach (var user in Model.Users)
+        {
+            <tr>
+                <th>@user.UserId</th>
+                <th>
+                    <a asp-page="./>Details" asp-route-userId="@user.UserId">Bmi målinger</a>
+                </th>
+            </tr>
+        }
+    }
+    </tBody>
+</table>

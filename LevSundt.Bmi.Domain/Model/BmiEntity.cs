@@ -33,7 +33,7 @@ public class BmiEntity
         UserId = userId;
 
         if (!IsValid()) throw new ArgumentException("Pre-conditions er ikke overholdt");
-        if (_domainService.BmiExistsOnDate(Date.Date)) throw new ArgumentException("Pre-conditions er ikke overholdt");
+        if (_domainService.BmiExistsOnDate(Date.Date, UserId)) throw new ArgumentException("Pre-conditions er ikke overholdt");
 
         CalculateBmi();
     }

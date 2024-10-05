@@ -37,7 +37,7 @@ public class BmiEntityCreateTest
         // Arrange
         var mock = new Mock<IBmiDomainService>();
         // uanset hvilken data, vil den altid returner false - HUSK vi tester her for invalid
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<string>())).Returns(false);
         // Act
 
         // Assert
@@ -66,7 +66,7 @@ public class BmiEntityCreateTest
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<string>())).Returns(false);
 
         // Act
 
@@ -76,7 +76,7 @@ public class BmiEntityCreateTest
 
     // Test af uacceptable værdier for VÆGT
     [Theory]
-    [InlineData(200, 100, 25)] 
+    [InlineData(200, 100, 25)]
     [InlineData(190, 90, 24.9)]
     public void Given_Height_And_Weight__The_Bmi_Is_Calculated_Correct(double height, double weight, double expected)
     {
@@ -88,26 +88,26 @@ public class BmiEntityCreateTest
         // Assert
         Assert.Equal(expected, Math.Round(sut.Bmi, 1));
     }
-    
 
-   [Fact]
+
+    [Fact]
     public void Given_Date_Is_Valid__Then_BmiEnitiy_Is_Created()
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(false);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<string>())).Returns(false);
         // Act
         var sut = new BmiEntity(mock.Object, 100, 100, "");
         // Assert
     }
-    
+
 
     [Fact]
     public void Given_Date_Is_InValid__Then_ArgumentException_Is_Thrown()
     {
         // Arrange
         var mock = new Mock<IBmiDomainService>();
-        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>())).Returns(true);
+        mock.Setup(m => m.BmiExistsOnDate(It.IsAny<DateTime>(), It.IsAny<string>())).Returns(true);
         // Act
         // Assert
         Assert.Throws<ArgumentException>(() => new BmiEntity(mock.Object, 100, 100, ""));
