@@ -31,7 +31,8 @@ public class EditModel : PageModel
             Weight = BmiModel.Weight,
             Date = BmiModel.Date,
             // Lost update håndteres med optimistic concurrency rowVersion
-            RowVersion = BmiModel.RowVersion
+            RowVersion = BmiModel.RowVersion,
+            UserId = User.Identity?.Name ?? String.Empty
         });
         return new RedirectToPageResult("/Bmi/Index");
     }
@@ -40,7 +41,8 @@ public class EditModel : PageModel
     {
         if (id == null) return NotFound();
 
-        var dto = _query.Get(id.Value);
+        // Hvis der ikke er en bruger logget ind, så sendes en tom string med
+        var dto = _query.Get(id.Value, User.Identity?.Name ?? String.Empty);
 
         BmiModel = new BmiEditViewModel
         {

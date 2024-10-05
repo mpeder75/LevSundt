@@ -31,13 +31,13 @@ var connectionString = builder.Configuration.GetConnectionString("WebAppUserDbCo
 /// UserContext.Migrations ELLER 
 /// 
 
-// Add-Migration InitialCreate -Context LevSundtContext -OutputDir Migrations
+// Add-Migration userMigration -Context LevSundtContext -Project LevSundt.SqlServerContext.Migrations
 // Update-Database -Context LevSundtContext
 builder.Services.AddDbContext<LevSundtContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("LevSundtDbConnection") + ";TrustServerCertificate=True",
         x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")));
 
-// Add-Migration InitialCreate -Context WebAppUserDbContext -OutputDir Migrations
+// Add-Migration InitialCreate -Context WebAppUserDbContext -Project LevSundt.WebApp.UserContext.Migrations
 // Update-Database -Context WebAppUserDbContext
 builder.Services.AddDbContext<WebAppUserDbContext>(options => 
     options.UseSqlServer(connectionString + ";TrustServerCertificate=True",

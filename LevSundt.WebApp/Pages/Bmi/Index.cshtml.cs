@@ -21,7 +21,8 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-        var businessModel = _bmiGetAllQuery.GetAll();
+        var businessModel = 
+            _bmiGetAllQuery.GetAll( User.Identity?.Name ?? String.Empty);
         /* // Metode 1 : Manuelt mapning
         foreach (var dto in businessModel)
         {
