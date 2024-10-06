@@ -4,6 +4,8 @@ using LevSundt.Bmi.Application.Repositories;
 using LevSundt.Bmi.Domain.DomainServices;
 using LevSundt.Bmi.Infrastructure.DomainServices;
 using LevSundt.Bmi.Infrastructure.Repository;
+using LevSundt.CrossCut;
+using LevSundt.CrossCut.TransactionHandling;
 using LevSundt.SqlServerContext;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +29,13 @@ builder.Services.AddDbContext<LevSundtContext>(
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("LevSundtDbConnection") + ";TrustServerCertificate=True",
             x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")));
+
+// Unit Of Work opsættes til at kunne arbejde på LevSundtContext
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>(p =>
+{
+    var db = p.GetService<LevSundtContext>();
+    return new UnitOfWork(db);
+});
 
 
 var app = builder.Build();

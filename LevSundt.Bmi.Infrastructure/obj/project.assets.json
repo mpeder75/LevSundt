@@ -991,7 +991,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "LevSundt.Bmi.Domain": "1.0.0"
+          "LevSundt.Bmi.Domain": "1.0.0",
+          "LevSundt.CrossCut": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LevSundt.Bmi.Application.dll": {}
@@ -1008,6 +1009,20 @@
         },
         "runtime": {
           "bin/placeholder/LevSundt.Bmi.Domain.dll": {}
+        }
+      },
+      "LevSundt.CrossCut/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+        },
+        "compile": {
+          "bin/placeholder/LevSundt.CrossCut.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LevSundt.CrossCut.dll": {}
         }
       },
       "LevSundt.SqlServerContext/1.0.0": {
@@ -2788,6 +2803,11 @@
       "type": "project",
       "path": "../LevSundt.Bmi.Domain/LevSundt.Bmi.Domain.csproj",
       "msbuildProject": "../LevSundt.Bmi.Domain/LevSundt.Bmi.Domain.csproj"
+    },
+    "LevSundt.CrossCut/1.0.0": {
+      "type": "project",
+      "path": "../LevSundt.CrossCut/LevSundt.CrossCut.csproj",
+      "msbuildProject": "../LevSundt.CrossCut/LevSundt.CrossCut.csproj"
     },
     "LevSundt.SqlServerContext/1.0.0": {
       "type": "project",

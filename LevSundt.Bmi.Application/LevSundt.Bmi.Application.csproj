@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LevSundt.Bmi.Domain\LevSundt.Bmi.Domain.csproj" />
+    <ProjectReference Include="..\LevSundt.CrossCut\LevSundt.CrossCut.csproj" />
   </ItemGroup>
 
 </Project>
