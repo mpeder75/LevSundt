@@ -9,4 +9,3 @@ public class BmiQueryResultDto
     public DateTime Date { get; set; }
     public byte[] RowVersion { get; set; }
 }
-

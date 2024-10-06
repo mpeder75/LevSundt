@@ -18,6 +18,3 @@ public class BmiGetQuery : IBmiGetQuery
         return _repository.Get(id, userId);
     }
 }
-
-
-

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LevSundt.WebApp.UserContext.Migrations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf3e6735870f289b1086a5a8387248a4e7058e8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54dc7840f58ea1d6a89723f4280c6d8684f41198")]
 [assembly: System.Reflection.AssemblyProductAttribute("LevSundt.WebApp.UserContext.Migrations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LevSundt.WebApp.UserContext.Migrations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

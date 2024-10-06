@@ -12,4 +12,3 @@ public class BmiTypeConfiguration : IEntityTypeConfiguration<BmiEntity>
         builder.HasKey(x => x.Id);
     }
 }
-

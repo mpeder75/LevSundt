@@ -2895,19 +2895,6 @@
           }
         }
       },
-      "LevSundt.Bmi.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "LevSundt.Bmi.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/LevSundt.Bmi.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LevSundt.Bmi.Application.dll": {}
-        }
-      },
       "LevSundt.Bmi.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2916,51 +2903,6 @@
         },
         "runtime": {
           "bin/placeholder/LevSundt.Bmi.Domain.dll": {}
-        }
-      },
-      "LevSundt.Bmi.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "LevSundt.Bmi.Application": "1.0.0",
-          "LevSundt.Bmi.Domain": "1.0.0",
-          "LevSundt.SqlServerContext": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/LevSundt.Bmi.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LevSundt.Bmi.Infrastructure.dll": {}
-        }
-      },
-      "LevSundt.SqlServerContext/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "LevSundt.Bmi.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
-        },
-        "compile": {
-          "bin/placeholder/LevSundt.SqlServerContext.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LevSundt.SqlServerContext.dll": {}
-        }
-      },
-      "LevSundt.SqlServerContext.Migrations/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "LevSundt.SqlServerContext": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
-        },
-        "compile": {
-          "bin/placeholder/LevSundt.SqlServerContext.Migrations.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LevSundt.SqlServerContext.Migrations.dll": {}
         }
       },
       "LevSundt.WebApp.UserContext/1.0.0": {
@@ -8217,30 +8159,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "LevSundt.Bmi.Application/1.0.0": {
-      "type": "project",
-      "path": "../LevSundt.Bmi.Application/LevSundt.Bmi.Application.csproj",
-      "msbuildProject": "../LevSundt.Bmi.Application/LevSundt.Bmi.Application.csproj"
-    },
     "LevSundt.Bmi.Domain/1.0.0": {
       "type": "project",
       "path": "../LevSundt.Bmi.Domain/LevSundt.Bmi.Domain.csproj",
       "msbuildProject": "../LevSundt.Bmi.Domain/LevSundt.Bmi.Domain.csproj"
-    },
-    "LevSundt.Bmi.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../LevSundt.Bmi.Infrastructure/LevSundt.Bmi.Infrastructure.csproj",
-      "msbuildProject": "../LevSundt.Bmi.Infrastructure/LevSundt.Bmi.Infrastructure.csproj"
-    },
-    "LevSundt.SqlServerContext/1.0.0": {
-      "type": "project",
-      "path": "../LevSundt.SqlServerContext/LevSundt.SqlServerContext.csproj",
-      "msbuildProject": "../LevSundt.SqlServerContext/LevSundt.SqlServerContext.csproj"
-    },
-    "LevSundt.SqlServerContext.Migrations/1.0.0": {
-      "type": "project",
-      "path": "../LevSundt.SqlServerContext.Migrations/LevSundt.SqlServerContext.Migrations.csproj",
-      "msbuildProject": "../LevSundt.SqlServerContext.Migrations/LevSundt.SqlServerContext.Migrations.csproj"
     },
     "LevSundt.WebApp.UserContext/1.0.0": {
       "type": "project",
@@ -8255,11 +8177,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "LevSundt.Bmi.Application >= 1.0.0",
-      "LevSundt.Bmi.Domain >= 1.0.0",
-      "LevSundt.Bmi.Infrastructure >= 1.0.0",
-      "LevSundt.SqlServerContext >= 1.0.0",
-      "LevSundt.SqlServerContext.Migrations >= 1.0.0",
       "LevSundt.WebApp.UserContext >= 1.0.0",
       "LevSundt.WebApp.UserContext.Migrations >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.8",
@@ -8302,21 +8219,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj": {
-              "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Application\\LevSundt.Bmi.Application.csproj"
-            },
-            "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj": {
-              "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Domain\\LevSundt.Bmi.Domain.csproj"
-            },
-            "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.Bmi.Infrastructure\\LevSundt.Bmi.Infrastructure.csproj"
-            },
-            "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj": {
-              "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext.Migrations\\LevSundt.SqlServerContext.Migrations.csproj"
-            },
-            "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj": {
-              "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.SqlServerContext\\LevSundt.SqlServerContext.csproj"
-            },
             "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj": {
               "projectPath": "C:\\Users\\mpede\\source\\repos\\mpeder75\\LevSundtSolution\\LevSundt.WebApp.UserContext.Migrations\\LevSundt.WebApp.UserContext.Migrations.csproj"
             },

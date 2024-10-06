@@ -19,11 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LevSundt.Bmi.Application\LevSundt.Bmi.Application.csproj" />
-    <ProjectReference Include="..\LevSundt.Bmi.Domain\LevSundt.Bmi.Domain.csproj" />
-    <ProjectReference Include="..\LevSundt.Bmi.Infrastructure\LevSundt.Bmi.Infrastructure.csproj" />
-    <ProjectReference Include="..\LevSundt.SqlServerContext.Migrations\LevSundt.SqlServerContext.Migrations.csproj" />
-    <ProjectReference Include="..\LevSundt.SqlServerContext\LevSundt.SqlServerContext.csproj" />
     <ProjectReference Include="..\LevSundt.WebApp.UserContext.Migrations\LevSundt.WebApp.UserContext.Migrations.csproj" />
     <ProjectReference Include="..\LevSundt.WebApp.UserContext\LevSundt.WebApp.UserContext.csproj" />
 

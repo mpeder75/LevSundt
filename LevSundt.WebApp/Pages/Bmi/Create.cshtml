@@ -1,5 +1,5 @@
 ﻿@page
-@model LevSundt.WebApp.Pages.Bmi.CreateModel
+@model CreateModel
 @{
 }
 <h2>Opret BMI måling</h2>
@@ -11,12 +11,12 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <label asp-for="BmiModel.Height"></label>
-                <input asp-for="BmiModel.Height" class="form-control" />
+                <input asp-for="BmiModel.Height" class="form-control"/>
                 <span asp-validation-for="BmiModel.Height" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="BmiModel.Weight"></label>
-                <input asp-for="BmiModel.Weight" class="form-control" />
+                <input asp-for="BmiModel.Weight" class="form-control"/>
                 <span asp-validation-for="BmiModel.Weight" class="text-danger"></span>
             </div>
 

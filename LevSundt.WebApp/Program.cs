@@ -1,47 +1,21 @@
-using LevSundt.Bmi.Application.Command;
-using LevSundt.Bmi.Application.Queries;
-using LevSundt.Bmi.Application.Repositories;
-using LevSundt.Bmi.Domain.DomainServices;
-using LevSundt.Bmi.Infrastructure.DomainServices;
-using LevSundt.Bmi.Infrastructure.Repository;
-using LevSundt.SqlServerContext;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+using LevSundt.WebApp.Infrastructure.Contract;
+using LevSundt.WebApp.Infrastructure.Implementation;
 using LevSundt.WebApp.UserContext;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the DI container
-builder.Services.AddScoped<ICreateBmiCommand, CreateBmiCommand>();
-builder.Services.AddScoped<IBmiRepository, BmiRepository>();
-builder.Services.AddScoped<IBmiGetAllQuery, BmiGetAllQuery>();
-builder.Services.AddScoped<IEditBmiCommand, EditBmiCommand>();
-builder.Services.AddScoped<IBmiGetQuery, BmiGetQuery>();
-builder.Services.AddScoped<IBmiDomainService, BmiDomainService>();
+// -----------------------EF Core------------------------
 
-// ------------------------EF Core------------------------
-
-// Configure EF Core
 var connectionString = builder.Configuration.GetConnectionString("WebAppUserDbConnection");
-
-/// <summary>
-/// HUSK når du laver en ny migration, at du skal angive hvilket projekt migrations skal gemmes i
-/// UserContext.Migrations ELLER 
-/// 
-
-// Add-Migration userMigration -Context LevSundtContext -Project LevSundt.SqlServerContext.Migrations
-// Update-Database -Context LevSundtContext
-builder.Services.AddDbContext<LevSundtContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LevSundtDbConnection") + ";TrustServerCertificate=True",
-        x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")));
 
 // Add-Migration InitialCreate -Context WebAppUserDbContext -Project LevSundt.WebApp.UserContext.Migrations
 // Update-Database -Context WebAppUserDbContext
-builder.Services.AddDbContext<WebAppUserDbContext>(options => 
+builder.Services.AddDbContext<WebAppUserDbContext>(options =>
     options.UseSqlServer(connectionString + ";TrustServerCertificate=True",
         x => x.MigrationsAssembly("LevSundt.WebApp.UserContext.Migrations")));
-
-// ------------------------EF Core------------------------
+// -----------------------EF Core-----------------------
 
 // Her opsættes en rolle Coach
 builder.Services.AddAuthorization(options =>
@@ -49,14 +23,22 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("CoachPolicy", policyBuilder => policyBuilder.RequireClaim("Coach"));
 });
 
+// Her opsættes Identity
 builder.Services.AddRazorPages(options =>
 {
     // man skal være logget ind for at tilgå BMI folderen
     options.Conventions.AuthorizeFolder("/Bmi/");
     // man skal være logget ind som Coach, for at tilgå Coach folderen
     options.Conventions.AuthorizeFolder("/Coach/", "CoachPolicy");
-
 });
+
+// Opsætning af HttpClient til at kommunikere med API'et
+builder.Services.AddHttpClient<ILevSundtService, LevSundtService>(client =>
+{
+    // Opsætning af base address til API'et - sættes præcist i appSettings.json
+    client.BaseAddress = new Uri(builder.Configuration["LevSundtBaseUrl"]);
+});
+
 
 // Configure Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>

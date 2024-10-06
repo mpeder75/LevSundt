@@ -24,8 +24,9 @@ builder.Services.AddScoped<IBmiDomainService, BmiDomainService>();
 // Update-Database -Context LevSundtContext
 builder.Services.AddDbContext<LevSundtContext>(
     options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LevSundtDbConnection") + ";TrustServerCertificate=True",
-        x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")));
+        options.UseSqlServer(
+            builder.Configuration.GetConnectionString("LevSundtDbConnection") + ";TrustServerCertificate=True",
+            x => x.MigrationsAssembly("LevSundt.SqlServerContext.Migrations")));
 
 
 var app = builder.Build();

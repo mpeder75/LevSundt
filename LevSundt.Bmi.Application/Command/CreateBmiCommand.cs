@@ -20,7 +20,7 @@ public class CreateBmiCommand : ICreateBmiCommand
     {
         var bmi = new BmiEntity
         (
-            _domainService, 
+            _domainService,
             bmiCreateRequestDto.Height,
             bmiCreateRequestDto.Weight,
             bmiCreateRequestDto.UserId

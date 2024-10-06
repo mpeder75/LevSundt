@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LevSundt.Bmi.Application.Queries.Dto;
+﻿using LevSundt.Bmi.Application.Queries.Dto;
 
-namespace LevSundt.Bmi.Application.Queries
+namespace LevSundt.Bmi.Application.Queries;
+
+public interface IBmiGetQuery
 {
-    public interface IBmiGetQuery
-    {
-        BmiQueryResultDto Get(int id, string userId);
-    }
+    BmiQueryResultDto Get(int id, string userId);
 }

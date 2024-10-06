@@ -9,13 +9,13 @@ public class BmiEntityCalculateBmiTest
     [Theory]
     [InlineData(200, 100, 25)]
     [InlineData(190, 90, 24.9)]
-    public void Given_Height_And_Weight_Then__BMI_Is_Calculated_Correct( 
+    public void Given_Height_And_Weight_Then__BMI_Is_Calculated_Correct(
         double height, double weight, double expected)
     {
         // Arrange
         // Vi skal bruge en mock af IBmiDomainService
-        var mock = new Mock<IBmiDomainService>();    
-        var sut = new BmiEntityTest(mock.Object, height, weight);   // mock bruges som parameter
+        var mock = new Mock<IBmiDomainService>();
+        var sut = new BmiEntityTest(mock.Object, height, weight); // mock bruges som parameter
 
         // Act
         sut.CalculateBmi();
@@ -26,7 +26,8 @@ public class BmiEntityCalculateBmiTest
 
     public class BmiEntityTest : BmiEntity
     {
-        public BmiEntityTest(IBmiDomainService domainService, double height, double weight) : base(domainService,height, weight, String.Empty)
+        public BmiEntityTest(IBmiDomainService domainService, double height, double weight) : base(domainService,
+            height, weight, string.Empty)
         {
         }
 

@@ -1,4 +1,4 @@
-using LevSundt.Bmi.Application.Queries;
+using LevSundt.WebApp.Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -6,21 +6,21 @@ namespace LevSundt.WebApp.Pages.Coach;
 
 public class DetailsModel : PageModel
 {
-    private readonly IBmiGetAllQuery _query;
+    private readonly ILevSundtService _levSundtService;
     [BindProperty] public List<CoachDetailsViewModel> DetailsViewModel { get; set; } = new();
     [BindProperty] public string UserName { get; set; } = string.Empty;
 
-    public DetailsModel(IBmiGetAllQuery query)
+    public DetailsModel(ILevSundtService levSundtService)
     {
-        _query = query;
+        _levSundtService = levSundtService;
     }
 
-    public IActionResult OnGet(string? userId)
+    public async Task<IActionResult> OnGet(string? userId)
     {
         if (string.IsNullOrWhiteSpace(userId)) return NotFound();
 
         // Load
-        var businessModel = _query.GetAll(userId);
+        var businessModel = await _levSundtService.GetAll(userId);
 
         // Do
         businessModel?.OrderBy(a => a.Date).ToList().ForEach(dto => DetailsViewModel.Add(

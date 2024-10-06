@@ -1,57 +1,61 @@
-using System.Runtime.InteropServices.JavaScript;
-using LevSundt.Bmi.Application.Command;
-using LevSundt.Bmi.Application.Command.Dto;
-using LevSundt.Bmi.Application.Queries;
+using LevSundt.WebApp.Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using BmiEditRequestDto = LevSundt.WebApp.Infrastructure.Contract.Dto.BmiEditRequestDto;
 
 namespace LevSundt.WebApp.Pages.Bmi;
 
 public class EditModel : PageModel
 {
-    private readonly IEditBmiCommand _bmiCommand;
-    private readonly IBmiGetQuery _query;
-    [BindProperty] 
-    public BmiEditViewModel BmiModel { get; set; }
+    private readonly ILevSundtService _levSundtService;
+    [BindProperty] public BmiEditViewModel BmiModel { get; set; }
 
-    public EditModel(IEditBmiCommand bmiCommand, IBmiGetQuery query)
+    public EditModel(ILevSundtService levSundtService)
     {
-        _bmiCommand = bmiCommand;
-        _query = query;
+        _levSundtService = levSundtService;
     }
 
-    public IActionResult OnPost()
+    public async Task<IActionResult> OnPost()
     {
         if (!ModelState.IsValid) return Page();
 
-        _bmiCommand.Edit(new BmiEditRequestDto
+        try
         {
-            Height = BmiModel.Height, 
-            Id = BmiModel.Id, 
-            Weight = BmiModel.Weight,
-            Date = BmiModel.Date,
-            // Lost update håndteres med optimistic concurrency rowVersion
-            RowVersion = BmiModel.RowVersion,
-            UserId = User.Identity?.Name ?? String.Empty
-        });
+            await _levSundtService.Edit(new BmiEditRequestDto
+            {
+                Height = BmiModel.Height,
+                Id = BmiModel.Id,
+                Weight = BmiModel.Weight,
+                Date = BmiModel.Date,
+                // Lost update håndteres med optimistic concurrency rowVersion
+                RowVersion = BmiModel.RowVersion,
+                UserId = User.Identity?.Name ?? string.Empty
+            });
+
+        }
+        catch (Exception e)
+        {
+         ModelState.AddModelError(string.Empty, e.Message);
+            return Page();
+        }
         return new RedirectToPageResult("/Bmi/Index");
     }
 
-    public IActionResult OnGet(int? id)
+    public async Task<IActionResult> OnGet(int? id)
     {
         if (id == null) return NotFound();
 
         // Hvis der ikke er en bruger logget ind, så sendes en tom string med
-        var dto = _query.Get(id.Value, User.Identity?.Name ?? String.Empty);
+        var dto = await _levSundtService.Get(id.Value, User.Identity?.Name ?? string.Empty);
 
         BmiModel = new BmiEditViewModel
         {
-            Height = dto.Height, 
-            Id = dto.Id, 
-            Weight = dto.Weight,
-            Date = dto.Date,
+            Height = BmiModel.Height,
+            Id = BmiModel.Id,
+            Weight = BmiModel.Weight,
+            Date = BmiModel.Date,
             // Lost update håndteres med optimistic concurrency rowVersion
-            RowVersion = dto.RowVersion
+            RowVersion = BmiModel.RowVersion
         };
         return Page();
     }

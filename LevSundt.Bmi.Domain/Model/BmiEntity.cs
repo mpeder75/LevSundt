@@ -5,25 +5,26 @@ namespace LevSundt.Bmi.Domain.Model;
 
 public class BmiEntity
 {
+    private readonly IBmiDomainService _domainService;
+
     /// <summary>
     ///     Vi er IKKE interesseret i at man kan ændre i vores model, derfor er set private
     /// </summary>
     public double Height { get; private set; }
+
     public double Weight { get; private set; }
     public double Bmi { get; private set; }
-    public string UserId { get; private set; }
+    public string UserId { get; }
     public int Id { get; }
     public DateTime Date { get; }
-    private readonly IBmiDomainService _domainService;
-    [Timestamp]
-    public byte[] RowVersion { get; private set; }
+
+    [Timestamp] public byte[] RowVersion { get; private set; }
 
     internal BmiEntity()
     {
-
     }
 
-    public BmiEntity(IBmiDomainService domainService,double height, double weight, string userId)
+    public BmiEntity(IBmiDomainService domainService, double height, double weight, string userId)
     {
         _domainService = domainService;
         // Check pre-conditions
@@ -33,7 +34,8 @@ public class BmiEntity
         UserId = userId;
 
         if (!IsValid()) throw new ArgumentException("Pre-conditions er ikke overholdt");
-        if (_domainService.BmiExistsOnDate(Date.Date, UserId)) throw new ArgumentException("Pre-conditions er ikke overholdt");
+        if (_domainService.BmiExistsOnDate(Date.Date, UserId))
+            throw new ArgumentException("Pre-conditions er ikke overholdt");
 
         CalculateBmi();
     }
@@ -58,7 +60,7 @@ public class BmiEntity
         Bmi = Weight / (Height / 100 * Height / 100);
     }
 
-    public void Edit(double weight,double height, byte[] rowVersion)
+    public void Edit(double weight, double height, byte[] rowVersion)
     {
         Height = height;
         Weight = weight;

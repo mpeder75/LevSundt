@@ -1,4 +1,4 @@
-using LevSundt.Bmi.Application.Queries;
+using LevSundt.WebApp.Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,37 +11,19 @@ namespace LevSundt.WebApp.Pages.Bmi;
 /// </summary>
 public class IndexModel : PageModel
 {
-    private readonly IBmiGetAllQuery _bmiGetAllQuery;
+    private readonly ILevSundtService _levSundtService;
     [BindProperty] public List<BmiIndexViewModel> IndexViewModel { get; set; } = new();
 
-    public IndexModel(IBmiGetAllQuery bmiGetAllQuery)
+    public IndexModel(ILevSundtService levSundtService)
     {
-        _bmiGetAllQuery = bmiGetAllQuery;
+        _levSundtService = levSundtService;
     }
 
-    public void OnGet()
+    public async Task OnGet()
     {
-        var businessModel = 
-            _bmiGetAllQuery.GetAll( User.Identity?.Name ?? String.Empty);
-        /* // Metode 1 : Manuelt mapning
-        foreach (var dto in businessModel)
-        {
-            IndexViewModel.Add(new BmiIndexViewModel { 
-                Bmi = dto.Bmi, 
-                Weight  = dto.Weight,
-                Height = dto.Height,
-                Id = dto.Id});
-        } */
+        var businessModel = await _levSundtService.GetAll(User.Identity?.Name ?? string.Empty);
 
-        // Metode 2 : Mapping med Lampda & Linq
-        // Business model konverteres til en list, derefter bruges en Foreach på List
-        businessModel.ToList().ForEach(dto => IndexViewModel.Add(new BmiIndexViewModel
-        {
-            Bmi = dto.Bmi,
-            Weight = dto.Weight, 
-            Height = dto.Height, 
-            Id = dto.Id,
-            Date = dto.Date
-        }));
+        businessModel?.ToList().ForEach(dto => IndexViewModel.Add(new BmiIndexViewModel
+            { Bmi = dto.Bmi, Weight = dto.Weight, Height = dto.Height, Id = dto.Id, Date = dto.Date }));
     }
 }
